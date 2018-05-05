@@ -11,6 +11,7 @@ class EmailParser
 
   def parse
     email_array = @email_list.split(/,\s/)
+    email_array.reject {|x| x == ""}
     email_array.flatten.uniq!
   end
 end
