@@ -13,6 +13,6 @@ class EmailParser
 
   def parse
     self.to_s.split(/\s|,/)
-    self.to_a.flatten.uniq
+    self.flatten.uniq
   end
 end
