@@ -5,19 +5,12 @@
 class EmailParser
   attr_accessor :email_list
 
-  @@all = []
-
-  def self.all
-    @@all
-    end
-
-  def initialize(emails)
-    @emails = email_list
-    @@all << email_list
+  def initialize(email_list)
+    @email_list = email_list
   end
 
   def parse
-    self.to_s.split(/\s|,/)
-    # self.flatten.uniq
+    self.split(/\s|,/)
+    self.flatten.uniq
   end
 end
